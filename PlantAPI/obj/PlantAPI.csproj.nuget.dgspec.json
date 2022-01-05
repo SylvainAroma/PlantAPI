@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Net6\\PlantAPI\\PlantAPI\\PlantAPI.csproj": {}
+    "D:\\Net6\\PlantAPI\\NET6minapi\\PlantAPI\\PlantAPI.csproj": {}
   },
   "projects": {
-    "D:\\Net6\\PlantAPI\\PlantAPI\\PlantAPI.csproj": {
+    "D:\\Net6\\PlantAPI\\NET6minapi\\PlantAPI\\PlantAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Net6\\PlantAPI\\PlantAPI\\PlantAPI.csproj",
+        "projectUniqueName": "D:\\Net6\\PlantAPI\\NET6minapi\\PlantAPI\\PlantAPI.csproj",
         "projectName": "PlantAPI",
-        "projectPath": "D:\\Net6\\PlantAPI\\PlantAPI\\PlantAPI.csproj",
+        "projectPath": "D:\\Net6\\PlantAPI\\NET6minapi\\PlantAPI\\PlantAPI.csproj",
         "packagesPath": "C:\\Users\\sylva\\.nuget\\packages\\",
-        "outputPath": "D:\\Net6\\PlantAPI\\PlantAPI\\obj\\",
+        "outputPath": "D:\\Net6\\PlantAPI\\NET6minapi\\PlantAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2DGeVWVnJJNgBVcmbEAZU8Jvloi6oFHpxw4cT3jwghoAPUJN1NZ0YMwUzSMEtIMcAj6UEFQaOF9i7fmTvW2wbw==",
+  "dgSpecHash": "p6rsZZZFkN7KlEip/aazAfv44s0dMoqGlf/Gv2+MFv+IcoxLDCzjiwNg4kQMu1o3cSXN6+07wDkgIxiq6Mt4yw==",
   "success": true,
-  "projectFilePath": "D:\\Net6\\PlantAPI\\PlantAPI\\PlantAPI.csproj",
+  "projectFilePath": "D:\\Net6\\PlantAPI\\NET6minapi\\PlantAPI\\PlantAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sylva\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\sylva\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
