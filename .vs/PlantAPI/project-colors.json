@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "b2ec65ba-5696-4355-8060-adb1be39e0ea": {
+      "ProjectGuid": "b2ec65ba-5696-4355-8060-adb1be39e0ea",
+      "DisplayName": "PlantAPI",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
