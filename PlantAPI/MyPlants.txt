@@ -1,0 +1,6 @@
+PlantAPI.Plant
+PlantAPI.Plant
+PlantAPI.Plant
+Id: 0
+Name: 
+Water Interval: 
