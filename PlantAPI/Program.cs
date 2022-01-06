@@ -9,9 +9,9 @@ app.MapGet("/getplants", () =>
     return FileHelpers.GetPlants();
 });
 
-app.MapPost("/addplant", (Plant p) =>
+app.MapPost("/addplant", (Plant plant) =>
 {
-    return FileHelpers.WritePlants(p);
+    return FileHelpers.WritePlants(plant);
 });
 
 app.MapGet("/clearplants", () => FileHelpers.ClearPlants());
@@ -24,10 +24,8 @@ app.MapGet("/apod", async () =>
     var content = await apiHelper.GetAstronomyPictureOfTheDay(uri);
 
     return content;
-
 });
 
 //app.UseRouting();
-
 
 app.Run();

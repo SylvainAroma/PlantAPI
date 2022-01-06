@@ -10,7 +10,7 @@
         {
             Directory.CreateDirectory(folder);
 
-            if (!File.Exists(pathString))
+            if (File.Exists(pathString) == false)
             {
                 using (var fs = File.Create(pathString)) { }
             }
