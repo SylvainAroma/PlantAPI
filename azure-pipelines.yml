@@ -7,7 +7,7 @@ trigger:
 - dev
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'windows-2022'
 
 variables:
   solution: '**/*.sln'
@@ -22,7 +22,6 @@ steps:
   inputs:
     packageType: 'sdk'
     version: '6.0.x'
-    includePreviewVersions: true
 
 - task: NuGetCommand@2
   inputs:
