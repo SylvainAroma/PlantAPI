@@ -1,35 +1,31 @@
-using Microsoft.AspNetCore.Mvc;
 using PlantAPI;
+using PlantAPI.Models.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
-
-app.MapGet("/hi", () => "Hi there!");
+app.MapGet("/getplants", () =>
+{
+    return FileHelpers.GetPlants();
+});
 
 app.MapPost("/addplant", (Plant p) =>
 {
-    string folder = @"D:\Net6\PlantAPI\PlantAPI";
-    string fileName = "MyPlants.txt";
-
-    Directory.CreateDirectory(folder);
-
-    var pathString = Path.Combine(folder, fileName);
-
-    if (!File.Exists(pathString))
-    {
-        using (var fs = File.Create(pathString))
-        {
-        }
-    }
-
-    using StreamWriter file = new(fileName, append: true);
-    //file.WriteLine(s);
-
+    return FileHelpers.WritePlants(p);
 });
 
-//integrate NASA API
+app.MapGet("/clearplants", () => FileHelpers.ClearPlants());
+
+app.MapGet("/apod", async () =>
+{
+    var uri = ("https://api.nasa.gov/planetary/apod?api_key=XySfp6ledMV8Pb472Hyc0inAi8ekYcPGifqb7NMK");
+    var apiHelper = new ApiHelper();
+
+    var content = await apiHelper.GetAstronomyPictureOfTheDay(uri);
+
+    return content;
+
+});
 
 //app.UseRouting();
 
