@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\plantapi\\NET6minapi\\PlantAPI\\PlantAPI.csproj": {}
+    "D:\\Net6\\PlantAPI\\NET6minapi\\PlantAPI\\PlantAPI.csproj": {}
   },
   "projects": {
-    "C:\\plantapi\\NET6minapi\\PlantAPI\\PlantAPI.csproj": {
+    "D:\\Net6\\PlantAPI\\NET6minapi\\PlantAPI\\PlantAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\plantapi\\NET6minapi\\PlantAPI\\PlantAPI.csproj",
+        "projectUniqueName": "D:\\Net6\\PlantAPI\\NET6minapi\\PlantAPI\\PlantAPI.csproj",
         "projectName": "PlantAPI",
-        "projectPath": "C:\\plantapi\\NET6minapi\\PlantAPI\\PlantAPI.csproj",
-        "packagesPath": "C:\\Users\\saroma\\.nuget\\packages\\",
-        "outputPath": "C:\\plantapi\\NET6minapi\\PlantAPI\\obj\\",
+        "projectPath": "D:\\Net6\\PlantAPI\\NET6minapi\\PlantAPI\\PlantAPI.csproj",
+        "packagesPath": "C:\\Users\\sylva\\.nuget\\packages\\",
+        "outputPath": "D:\\Net6\\PlantAPI\\NET6minapi\\PlantAPI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\saroma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sylva\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +25,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Net6\\PlantAPIModels\\PlantAPIModels\\bin\\Release": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -47,6 +51,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "PlantAPIModels": {
+              "target": "Package",
+              "version": "[1.2.0, )"
             }
           },
           "imports": [
@@ -67,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

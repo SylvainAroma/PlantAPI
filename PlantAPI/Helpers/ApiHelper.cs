@@ -1,20 +1,21 @@
 ﻿using System.Net.Http.Headers;
 
-namespace PlantAPI.Models.Helpers
+namespace PlantAPI.Helpers;
+
+public static class ApiHelper
 {
-    public class ApiHelper
+    public static async Task<AstronomyPictureOfTheDay> GetAstronomyPictureOfTheDay()
     {
-        public async Task<AstronomyPictureOfTheDay> GetAstronomyPictureOfTheDay(string uri)
-        {
-            HttpClient client = new HttpClient();
+        var uri = ("https://api.nasa.gov/planetary/apod?api_key=XySfp6ledMV8Pb472Hyc0inAi8ekYcPGifqb7NMK");
 
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
+        HttpClient client = new HttpClient();
 
-            HttpResponseMessage response = await client.GetAsync(uri);
+        client.DefaultRequestHeaders.Accept.Clear();
+        client.DefaultRequestHeaders.Accept.Add(
+            new MediaTypeWithQualityHeaderValue("application/json"));
 
-            return await response.Content.ReadFromJsonAsync<AstronomyPictureOfTheDay>();
-        }
+        HttpResponseMessage response = await client.GetAsync(uri);
+
+        return await response.Content.ReadFromJsonAsync<AstronomyPictureOfTheDay>();
     }
 }

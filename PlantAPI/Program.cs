@@ -1,31 +1,32 @@
-using PlantAPI;
-using PlantAPI.Models.Helpers;
+global using PlantAPIModels;
+using PlantAPI.Helpers;
+
+const string allowAllOrigins = "AllowAllOrigins";
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: allowAllOrigins,
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                .AllowAnyMethod();
+        });
+});
+
 var app = builder.Build();
 
-app.MapGet("/getplants", () =>
-{
-    return FileHelpers.GetPlants();
-});
+//Endpoints
+app.MapGet("/getplants", async () => await FileHelpers.GetPlants());
 
-app.MapPost("/addplant", (Plant plant) =>
-{
-    return FileHelpers.WritePlants(plant);
-});
+app.MapPost("/addplant", async (Plant plant) => await FileHelpers.WritePlants(plant));
 
-app.MapGet("/clearplants", () => FileHelpers.ClearPlants());
+app.MapGet("/clearplants", async () => await FileHelpers.ClearPlants());
 
-app.MapGet("/apod", async () =>
-{
-    var uri = ("https://api.nasa.gov/planetary/apod?api_key=XySfp6ledMV8Pb472Hyc0inAi8ekYcPGifqb7NMK");
-    var apiHelper = new ApiHelper();
+app.MapGet("/apod", async () => await ApiHelper.GetAstronomyPictureOfTheDay());
 
-    var content = await apiHelper.GetAstronomyPictureOfTheDay(uri);
 
-    return content;
-});
-
-//app.UseRouting();
+app.UseCors(allowAllOrigins);
 
 app.Run();

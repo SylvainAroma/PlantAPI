@@ -1,37 +1,37 @@
-﻿namespace PlantAPI
+﻿namespace PlantAPI.Helpers;
+
+public static class FileHelpers
 {
-    public static class FileHelpers
+    private static readonly string Folder = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+    private const string FileName = "MyPlants.txt";
+    private static readonly string PathString = Path.Combine(Folder, FileName);
+
+    public static async Task<string[]> WritePlants(Plant p)
     {
-        static readonly string folder = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-        static readonly string fileName = "MyPlants.txt";
-        static readonly string pathString = Path.Combine(folder, fileName);
+        Directory.CreateDirectory(Folder);
 
-        public static string[] WritePlants(Plant p)
+        if (File.Exists(PathString) == false)
         {
-            Directory.CreateDirectory(folder);
-
-            if (File.Exists(pathString) == false)
-            {
-                using (var fs = File.Create(pathString)) { }
-            }
-
-            using StreamWriter file = new(pathString, true);
-
-            file.WriteLine($"Name: {p.Name} Water Interval: {p.WaterInterval}");
-
-            file.Close();
-
-            return File.ReadAllLines(pathString);
+            await using (var fs = File.Create(PathString)) { }
         }
 
-        public static string[] GetPlants()
-        {
-            return File.ReadAllLines(pathString);
-        }
+        await using StreamWriter file = new(PathString, true);
 
-        public static void ClearPlants()
-        { 
-            File.Delete(pathString);
-        }
+        await file.WriteLineAsync($"Name: {p.Name} Water Interval: {p.WaterTime}");
+
+        file.Close();
+
+        return await File.ReadAllLinesAsync(PathString);
+    }
+
+    public static async Task<string[]> GetPlants()
+    {
+        return await File.ReadAllLinesAsync(PathString);
+    }
+
+    public static async Task<string[]> ClearPlants()
+    { 
+        File.Delete(PathString);
+        return await File.ReadAllLinesAsync(PathString);
     }
 }

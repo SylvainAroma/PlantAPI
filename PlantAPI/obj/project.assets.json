@@ -369,6 +369,15 @@
           }
         }
       },
+      "PlantAPIModels/1.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/PlantAPIModels.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/PlantAPIModels.dll": {}
+        }
+      },
       "System.Collections.Immutable/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -1275,6 +1284,17 @@
         "version.txt"
       ]
     },
+    "PlantAPIModels/1.2.0": {
+      "sha512": "si3MJA4MxX/9hXRIQaVUfwLOmSNrgEAERtsEkEPabc8aoc1N4Ddp4QW0Ird0R2PoysU9RZUOO46eoveejLEhdg==",
+      "type": "package",
+      "path": "plantapimodels/1.2.0",
+      "files": [
+        ".nupkg.metadata",
+        "lib/net6.0/PlantAPIModels.dll",
+        "plantapimodels.1.2.0.nupkg.sha512",
+        "plantapimodels.nuspec"
+      ]
+    },
     "System.Collections.Immutable/6.0.0": {
       "sha512": "l4zZJ1WU2hqpQQHXz1rvC3etVZN+2DLmQMO79FhOTZHMn8tDRr+WU287sbomD0BETlmKDn0ygUgVy9k5xkkJdA==",
       "type": "package",
@@ -1763,23 +1783,28 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.EntityFrameworkCore >= 6.0.0",
-      "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.0"
+      "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.0",
+      "PlantAPIModels >= 1.2.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\saroma\\.nuget\\packages\\": {}
+    "C:\\Users\\sylva\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\plantapi\\NET6minapi\\PlantAPI\\PlantAPI.csproj",
+      "projectUniqueName": "D:\\Net6\\PlantAPI\\NET6minapi\\PlantAPI\\PlantAPI.csproj",
       "projectName": "PlantAPI",
-      "projectPath": "C:\\plantapi\\NET6minapi\\PlantAPI\\PlantAPI.csproj",
-      "packagesPath": "C:\\Users\\saroma\\.nuget\\packages\\",
-      "outputPath": "C:\\plantapi\\NET6minapi\\PlantAPI\\obj\\",
+      "projectPath": "D:\\Net6\\PlantAPI\\NET6minapi\\PlantAPI\\PlantAPI.csproj",
+      "packagesPath": "C:\\Users\\sylva\\.nuget\\packages\\",
+      "outputPath": "D:\\Net6\\PlantAPI\\NET6minapi\\PlantAPI\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\saroma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sylva\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1787,6 +1812,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "D:\\Net6\\PlantAPIModels\\PlantAPIModels\\bin\\Release": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1812,6 +1838,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[6.0.0, )"
+          },
+          "PlantAPIModels": {
+            "target": "Package",
+            "version": "[1.2.0, )"
           }
         },
         "imports": [
@@ -1832,7 +1862,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
