@@ -5,7 +5,17 @@
       "ProjectGuid": "b2ec65ba-5696-4355-8060-adb1be39e0ea",
       "DisplayName": "PlantAPI",
       "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "3051bc7a-4425-46bd-b92c-373bffec5ca7": {
+      "ProjectGuid": "3051bc7a-4425-46bd-b92c-373bffec5ca7",
+      "DisplayName": "ApiModels",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }
