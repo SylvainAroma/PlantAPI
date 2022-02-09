@@ -8,6 +8,7 @@ const string allowAllOrigins = "AllowAllOrigins";
 var builder = WebApplication.CreateBuilder(args);
 
 //If your services become large, use extension methods
+builder.Services.AddDbContext<Persistence>(opt => opt.UseInMemoryDatabase("PlantList"));
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: allowAllOrigins,
@@ -20,13 +21,18 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-//Endpoints using file helper
-app.MapGet("/getplants", async () => await FileHelpers.GetPlants());
-app.MapPost("/addplant", async Task<string[]> ([Required] Plant plant) => await FileHelpers.WritePlants(plant));
-app.MapGet("/clearplants", async () => await FileHelpers.ClearPlants());
-
-//Endpoint using database
-app.MapGet("/plants", async (Persistence db) => await db.Plants.ToListAsync());
+//Endpoints
+app.MapPost("/plant", async (Persistence db, [Required] Plant plant) =>
+{
+    await db.Plants.AddAsync(plant);
+    await db.SaveChangesAsync();
+});
+app.MapGet("/plants", async Task<List<Plant>> (Persistence db) => await db.Plants.ToListAsync());
+app.MapDelete("/plants", async (Persistence db) =>
+{
+    db.Plants.RemoveRange();
+    await db.SaveChangesAsync();
+});
 
 //Endpoint calling external API
 app.MapGet("/apod", async () => await ApiHelper.GetAstronomyPictureOfTheDay());

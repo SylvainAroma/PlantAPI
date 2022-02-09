@@ -157,4 +157,6 @@ C:\plantapi\NET6minapi\PlantAPI\obj\Debug\net6.0\PlantAPI.dll
 C:\plantapi\NET6minapi\PlantAPI\obj\Debug\net6.0\ref\PlantAPI.dll
 C:\plantapi\NET6minapi\PlantAPI\obj\Debug\net6.0\PlantAPI.pdb
 C:\plantapi\NET6minapi\PlantAPI\obj\Debug\net6.0\PlantAPI.genruntimeconfig.cache
-D:\Net6\PlantAPI\NET6minapi\PlantAPI\bin\Debug\net6.0\PlantAPIModels.dll
+D:\Net6\PlantAPI\NET6minapi\PlantAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
+D:\Net6\PlantAPI\NET6minapi\PlantAPI\bin\Debug\net6.0\ApiModels.dll
+D:\Net6\PlantAPI\NET6minapi\PlantAPI\bin\Debug\net6.0\ApiModels.pdb
